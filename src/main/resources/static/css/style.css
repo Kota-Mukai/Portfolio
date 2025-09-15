@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    margin : 0;
+    padding: 0;
+}
+
+header{
+    width: auto;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    background: linear-gradient(90deg, #01a75f 0%, #00d0a0d3 40%, #01cbaa 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 10px;
+}
+
+.upper-nav li{
+    font-weight: bold; 
+    margin-left: 40px;
+    padding-right: 30px;    
+    display: inline-block;
+}
+
+.upper-nav li a{
+    color: rgb(0, 199, 113);  
+    text-decoration: none;
+}
+
+.upper-nav li a:hover{
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+#greeting{
+    display: flex;
+}
+
+div.greeting-msg{
+    font-size: 100px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #01a75f 0%, #00d0a0d3 40%, #01cbaa 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 50%;
+    margin-left: 100px;
+    text-align: center;
+}
+
+
+
+img.greeting-img{
+    width        : 275px;
+    height       : 325px;
+    border-radius: 50%;
+    margin-top   : 20px;
+    margin-left  : 30px;
+}
+
+img.github-logo{
+    width       : 40px;
+    height      : 40px;
+    margin-top  : 5px;
+    margin-left : 115px;
+}
+
+img.linkedin-logo{
+    width      : 40px;
+    height     : 40px;
+    margin-top : 10px;
+    margin-left: 20px;
+}
+
+.sentence{
+    background-color: rgb(20, 20, 20);
+    border: 5px solid #01cbaa;
+    margin: 80px 50px 0 50px;
+}
+
+h2.common-header{
+    font-size: 75px;
+    background: linear-gradient(90deg, #01a75f 0%, #00d0a0d3 40%, #01cbaa 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top    : 0;
+    margin-bottom : 0;
+    text-align    : center;
+}
+
+p.common-sentence{
+    font-size   : 25px;
+    font-weight : bold;
+    color       : white;
+    text-align  : center;
+}
+
+h3.skillset-labeling{
+    font-size     : 30px;
+    font-weight   : bold;
+    background: linear-gradient(90deg, #00078d 10%, #7273ded3 40%, #eaeaf3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top    : 10px;
+    margin-bottom : 0;
+    text-align    : center;
+}
+
+p.skillset-img{
+    margin-top    : 5px;
+    margin-bottom : 0;
+    text-align    : center;
+}
+
+img.backend-logo{
+    width         : 150px;
+    height        : 250px;
+    margin-top    : 40px;
+    margin-bottom : 0;
+}
+
+img.frontend-logo{
+    width            : 250px;
+    height           : 250px;
+    margin-top       : 40px;
+    margin-bottom    : 0;
+    justify-content : space-between;
+}
+
+img.database-logo{
+    width         : 250px;
+    height        : 250px;
+    margin-top       : 40px;
+    margin-bottom : 0;
+}
+
+img.frameworks-logo{
+    width          : 250px;
+    height         : 250px;
+    margin-top       : 40px;
+    margin-bottom  : 0;
+}
+
+p.backend-name{
+    font-size  : 30px;
+    font-weight: bold;
+    color      : white;
+    margin     : 0 0 100px 0;
+    text-align : center;
+}
+
+div.frontend-name{
+    font-size  : 30px;
+    font-weight: bold;
+    color      : white;
+    margin     : 0 0 100px 0;
+    text-align : center;
+}
+
+p.frontend-name{
+    margin     : 0 95px 100px 80px;
+    display    : inline;
+}
+
+p.database-name{
+    font-size  : 30px;
+    font-weight: bold;
+    color      : white;
+    margin     : 0 0 100px 0;
+    text-align : center;
+}
+
+p.frameworks-name{
+    font-size  : 30px;
+    font-weight: bold;
+    color      : white;
+    margin     : 0 0 100px 0;
+    text-align : center;
+}
+

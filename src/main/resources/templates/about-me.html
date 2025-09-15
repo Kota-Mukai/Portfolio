@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>K.Mukai's Portfolio -About Me</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <header>
+    <h1>K.Mukai's Portfolio</h1>
+    <nav>
+       <ul class = "upper-nav">
+          <li><a class = "page-link" href = "/about-me">About Me</a></li>
+          <li><a class = "page-link" href = "/projects">Projects</a></li>
+          <li><a class = "page-link" href = "/blog">Blog</a></li>
+          <li><a class = "page-link" href = "/contact">Contact</a></li>
+       </ul> 
+    </nav>
+    </header>
+
+    <section id = "greeting">
+       <div class  = "greeting-msg">Welcome<br>to<br>My Portfolio</div>
+       <p   class  = "images" >
+       <img class  = "greeting-img"  src = "/img/profileAboutMe.jpg" alt="Kota Mukai's profile image"><br>
+       <a href="https://github.com/Kota-Mukai"          ><img class="github-logo"   src = "/img/githubLogo.png"     alt="Kota Mukai's github page"  ></a>
+       <a href="https://www.linkedin.com/in/kota-mukai/"><img class="linkedin-logo" src = "/img/linkedinLogo.png"   alt="Kota Mukai's LinkedIn page"></a>
+       </p>
+    </section>
+    
+    <section class = "sentence">
+      <h2 class = "common-header">About Me</h2>
+      <p  class = "common-sentence">
+         My name is Kota Mukai,<br>
+         a graduate student, independent developer, and entrepreneur based in Japan.<br><br>
+         I am currently pursuing a Master’s degree in Physical Education Pedagogy<br>
+         at the University of Tsukuba, where my research focuses on improving methods<br>
+         for teaching physical education in schools.<br><br>
+      </p>
+    </section>
+
+    <section class = "sentence">
+      <h2 class = "common-header">Career Vision</h2>
+      <p  class = "common-sentence">
+         Upon completing my graduate studies in March 2026, I will begin my career<br>
+         as an IT consultant at a leading global systems integrator.<br>
+         To strengthen my technical foundation, I started learning Java in April 2025<br>
+         and have since been actively developing projects as an independent developer.<br><br>
+         Through this journey, I discovered a deep passion for coding and software development.<br>
+         Looking ahead, I aspire to transition into a software engineering role<br>
+         and am committed to continuously expanding my technical expertise.<br>
+         I remain open to opportunities that allow me to grow as an engineer<br>
+         and contribute to innovative solutions.
+      </p>
+    </section>
+
+    <section class = "sentence">
+      <h2  class = "common-header">My Skillset</h2><br>
+
+      <h3   class = "skillset-labeling">Backend Development</h3>
+      <p    class = "skillset-img">
+         <img class = "backend-logo"         src = "/img/javaLogo.png"       alt = "Kota Mukai can use Java">
+      </p>
+      <p    class = "backend-name" >Java</p>
+
+      <h3  class = "skillset-labeling">Frontend Development</h3>
+      <p   class = "skillset-img">
+         <img class = "frontend-logo"        src = "/img/htmlLogo.png"       alt = "Kota Mukai can use HTML5">
+         <img class = "frontend-logo"        src = "/img/cssLogo.png"        alt = "Kota Mukai can use CSS3">
+      </p>
+      <div  class = "frontend-name">
+      <p    class = "frontend-name">HTML</p>
+      <p    class = "frontend-name">CSS</p>
+      </div>
+
+      <h3   class = "skillset-labeling">Database</h3>
+      <p    class = "skillset-img">
+         <img class = "database-logo"        src = "/img/sqlLogo.png"        alt = "Kota Mukai can use SQL">
+      </p>
+      <p    class = "database-name">MySQL</p>
+
+      <h3   class = "skillset-labeling">Frameworks</h3>
+      <p    class = "skillset-img">
+         <img class = "frameworks-logo"      src = "/img/springbootLogo.png" alt = "Kota Mukai can use Spring boot">
+      </p>
+      <p    class = "frameworks-name">Spring boot</p>
+    </section>
+
+</body>
+</html>
