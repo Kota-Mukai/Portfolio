@@ -1,5 +1,6 @@
 package com.example.portfolio.service;
 
+import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +12,18 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SendMessageServiceImpl implements SendMessageService{
 
-    private final SimpleMailMessage msg;
-
+    private final MailSender ms;
+   
     @Override
     public void send(SendMessageForm form) {
-        
-        msg.setFrom   (form.getSenderMailAdress() + "/" + form.getSenderName());
-        msg.setTo     ("kota1022mukai@gmail.com");
-        msg.setSubject("Contact from the portfolio");
-        msg.setText   (form.getMainMassage());
 
+        SimpleMailMessage smm = new SimpleMailMessage();
+        
+        smm.setFrom   (form.getSenderMailAddress() + "/" + form.getSenderName());
+        smm.setTo     ("kota1022mukai@gmail.com");
+        smm.setSubject("Contact from the portfolio");
+        smm.setText   (form.getMainMessage());
+        ms.send(smm);
    }
 
 }
