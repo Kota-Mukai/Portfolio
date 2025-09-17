@@ -16,7 +16,10 @@ public class SendMessageServiceImpl implements SendMessageService{
     @Override
     public void send(SendMessageForm form) {
         
-        msg.setFrom(form.getSenderMailAdress());
+        msg.setFrom   (form.getSenderMailAdress() + "/" + form.getSenderName());
+        msg.setTo     ("kota1022mukai@gmail.com");
+        msg.setSubject("Contact from the portfolio");
+        msg.setText   (form.getMainMassage());
 
         throw new UnsupportedOperationException("Unimplemented method 'send'");
     }
