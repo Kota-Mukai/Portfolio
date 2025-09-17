@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>K.Mukai's Portfolio -Contact</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <header>
+    <h1>K.Mukai's Portfolio</h1>
+    <nav>
+       <ul class = "upper-nav">
+          <li><a class = "page-link" href = "/about-me">About Me</a></li>
+          <li><a class = "page-link" href = "/projects">Projects</a></li>
+          <li><a class = "page-link" href = "/blog">Blog</a></li>
+          <li><a class = "page-link" href = "/contact">Contact</a></li>
+       </ul> 
+    </nav>
+    </header>
+
+    <section class = "sentence">
+      <h2 class = "common-header">Contact</h2>
+      <div>
+        <form action = "/confirm-contact-message" method = "POST">
+            <div>Your Name</div>
+            <div>
+                <input class = "contact-name" type = "text" name = "contact-name">
+            </div>
+            <div>Your Mail Address</div>
+            <div>
+                <input class = "contact-mailaddress" type = "email" name = "contact-mailaddress">
+            </div>
+            <div>Message</div>
+            <div>
+                <textarea class = "contact-message" name = "contact-message" rows = "10" cols = "40"></textarea>
+            </div>
+            <div>
+                <input class = "send-message" type = "submit" value = " Send Message" >
+            </div>
+        </form>
+      </div>
+    </section>
+    
+</body>
+</html>

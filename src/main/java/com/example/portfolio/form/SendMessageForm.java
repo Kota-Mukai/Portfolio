@@ -6,7 +6,7 @@ import lombok.Data;
 public class SendMessageForm {
 
     private String SenderName;
-    private String SenderMailAdress;
-    private String MainMassage;
+    private String SenderMailAddress;
+    private String MainMessage;
 
 }
