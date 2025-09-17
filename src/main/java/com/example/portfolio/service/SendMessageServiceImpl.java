@@ -21,7 +21,6 @@ public class SendMessageServiceImpl implements SendMessageService{
         msg.setSubject("Contact from the portfolio");
         msg.setText   (form.getMainMassage());
 
-        throw new UnsupportedOperationException("Unimplemented method 'send'");
-    }
+   }
 
 }
