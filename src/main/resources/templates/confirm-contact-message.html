@@ -36,7 +36,13 @@
         <input type = "hidden" th:field = "*{MainMessage}">
         <input type = "submit" value    = "Send Message" class = "button">
       </form>
-      
+
+      <form action = "/contact" method = "POST" th:object = "${SendMessageForm}">
+        <input type = "hidden" th:field = "*{SenderName}">
+        <input type = "hidden" th:field = "*{SenderMailAdress}">
+        <input type = "hidden" th:field = "*{MainMessage}">
+        <input type = "submit" value    = "Go Back"      class = "button">
+      </form>
     </section>
 
 </body>
