@@ -22,21 +22,23 @@
     <section class = "sentence">
       <h2 class = "common-header">Contact</h2>
       <div>
-        <form action = "/confirm-contact-message" method = "POST">
+        <form action = "/confirm-contact-message" method = "POST" 
+              th:object = "${sendMessageForm}">
             <div>Your Name</div>
             <div>
-                <input class = "contact-name" type = "text" name = "contact-name">
+                <input class    = "contact-name"        type = "text"  th:field = "*{senderName}">
             </div>
             <div>Your Mail Address</div>
             <div>
-                <input class = "contact-mailaddress" type = "email" name = "contact-mailaddress">
+                <input class    = "contact-mailaddress" type = "email" th:field = "*{senderMailAddress}">
             </div>
             <div>Message</div>
             <div>
-                <textarea class = "contact-message" name = "contact-message" rows = "10" cols = "40"></textarea>
+                <textarea class = "contact-message"                    th:field = "*{mainMessage}" 
+                          rows = "10" cols = "40"></textarea>
             </div>
             <div>
-                <input class = "send-message" type = "submit" value = " Send Message" >
+                <input class = "send-message" type = "submit" value = "Send Message" >
             </div>
         </form>
       </div>

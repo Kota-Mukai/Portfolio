@@ -21,26 +21,26 @@
 
     <section class = "sentence">
       <h2 class = "common-header">Please confirm your message...</h2>
-      <div th:object = "${SendMessageForm}">
+      <div th:object = "${sendMessageForm}">
            <p>Your Name</p>
-           <p th:text = "*{SenderName}"></p>
+           <p th:text = "*{senderName}"></p>
            <p>Your Mail Adress</p>
-           <p th:text = "*{SenderMailAdress}"></p>
+           <p th:text = "*{senderMailAddress}"></p>
            <p>Message</p>
-           <p th:text = "*{MainMessage}"></p>
+           <p th:text = "*{mainMessage}"></p>
       </div>
 
-      <form action = "/send-message" method = "POST" th:object = "${SendMessageForm}">
-        <input type = "hidden" th:field = "*{SenderName}">
-        <input type = "hidden" th:field = "*{SenderMailAdress}">
-        <input type = "hidden" th:field = "*{MainMessage}">
+      <form action = "/send-message" method = "POST" th:object = "${sendMessageForm}">
+        <input type = "hidden" th:field = "*{senderName}">
+        <input type = "hidden" th:field = "*{senderMailAddress}">
+        <input type = "hidden" th:field = "*{mainMessage}">
         <input type = "submit" value    = "Send Message" class = "button">
       </form>
 
-      <form action = "/contact" method = "POST" th:object = "${SendMessageForm}">
-        <input type = "hidden" th:field = "*{SenderName}">
-        <input type = "hidden" th:field = "*{SenderMailAdress}">
-        <input type = "hidden" th:field = "*{MainMessage}">
+      <form action = "/contact" method = "POST" th:object = "${sendMessageForm}">
+        <input type = "hidden" th:field = "*{senderName}">
+        <input type = "hidden" th:field = "*{senderMailAddress}">
+        <input type = "hidden" th:field = "*{mainMessage}">
         <input type = "submit" value    = "Go Back"      class = "button">
       </form>
     </section>
