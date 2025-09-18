@@ -35,7 +35,7 @@ public class ContactController {
         return "confirm-contact-message";
     }
 
-    @PostMapping("/complete")
+    @PostMapping("/send-message")
     public String sendContactMessage(SendMessageForm form,
                     RedirectAttributes redirectAttributes) {
         

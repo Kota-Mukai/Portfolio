@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>K.Mukai's Portfolio -Contact</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <header>
+    <h1>K.Mukai's Portfolio</h1>
+    <nav>
+       <ul class = "upper-nav">
+          <li><a class = "page-link" href = "/about-me">About Me</a></li>
+          <li><a class = "page-link" href = "/projects">Projects</a></li>
+          <li><a class = "page-link" href = "/blog">Blog</a></li>
+          <li><a class = "page-link" href = "/contact">Contact</a></li>
+       </ul> 
+    </nav>
+    </header>
+
+    <section class = "sentence">
+      <h2 class = "common-header">Please confirm your message...</h2>
+      <div th:object = "${SendMessageForm}">
+           <p>Your Name</p>
+           <p th:text = "*{SenderName}"></p>
+           <p>Your Mail Adress</p>
+           <p th:text = "*{SenderMailAdress}"></p>
+           <p>Message</p>
+           <p th:text = "*{MainMessage}"></p>
+      </div>
+
+      <form action = "/send-message" method = "POST" th:object = "${SendMessageForm}">
+        <input type = "hidden" th:field = "*{SenderName}">
+        <input type = "hidden" th:field = "*{SenderMailAdress}">
+        <input type = "hidden" th:field = "*{MainMessage}">
+        <input type = "submit" value    = "Send Message" class = "button">
+      </form>
+      
+    </section>
+
+</body>
+</html>
