@@ -22,10 +22,15 @@ public class ContactController {
     private final SendMessageService service;
 
     @GetMapping("/contact")
-    public String showContactPage() {
+    public String showContactPage(@ModelAttribute SendMessageForm form) {
         return "contact";
     }
 
+    @PostMapping("/contact")
+    public String showContactPageRet(@ModelAttribute SendMessageForm form){
+        return "contact";
+    }
+        
     @PostMapping("/confirm-contact-message")
     public String confirmContactMessage(@ModelAttribute
                         SendMessageForm form, Model model) {
@@ -44,6 +49,12 @@ public class ContactController {
         redirectAttributes.addFlashAttribute("msg", "Thank you for contacting me.I'll respond after reveiwing it.");
         
         return "redirect:/complete";
+    }
+
+    @GetMapping("/complete")
+    public String complete() {
+        
+    	return "complete";
     }
     
 }
