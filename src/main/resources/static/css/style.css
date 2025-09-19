@@ -183,3 +183,42 @@ p.frameworks-name{
     text-align : center;
 }
 
+#contact-form{
+    text-align: center;
+}
+
+div.contact-labeling{
+    font-size     : 30px;
+    font-weight   : bold;
+    background: linear-gradient(90deg, #00078d 10%, #7273ded3 40%, #eaeaf3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top    : 10px;
+    margin-bottom : 0;
+}
+
+.textbox{
+    font-size     : 40px;
+    outline       : 0;
+    border        : 2px solid #7273ded3;
+    margin-bottom : 50px;
+}
+
+input.button{
+    font-size        : 30px;
+    font-weight      : bold;
+    color            : #7273ded3;
+    background-color : black;
+    border           : solid 3px #7273ded3;
+    border-radius    : 20px;
+    box-shadow       : 0px 0px 10px #7273ded3;
+    padding          : 5px 10px 5px 10px;
+    margin-bottom    : 40px;
+}
+
+input.button:hover{
+    color            : white;
+    background-color : #7273ded3;
+    transition       : 0.6s;
+    cursor           : pointer;
+}
