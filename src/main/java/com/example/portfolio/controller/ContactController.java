@@ -46,7 +46,8 @@ public class ContactController {
         
         service.send(form);
 
-        redirectAttributes.addFlashAttribute("msg", "Thank you for contacting me.I'll respond after reveiwing it.");
+        redirectAttributes.addFlashAttribute("msg", "Thank you for contacting me.");
+        redirectAttributes.addFlashAttribute("msg2", "I'll respond after reviewing it.");
         
         return "redirect:/complete";
     }
