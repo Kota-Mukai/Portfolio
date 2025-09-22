@@ -20,10 +20,9 @@
     </header>
 
     <section class = "sentence">
-      <h2 class = "common-header" th:text = "${msg}"></h2>
+      <p class = "complete" th:text = "${msg} ?:'Your message has been sent successfully.'"></p>
+      <p class = "complete" th:text = "${msg2} ?:'Feel free to keep browsing my portfolio.'"></p>
     </section>
-
-    <a href = "/about-me">About Me</a>
 
 </body>
 </html>
