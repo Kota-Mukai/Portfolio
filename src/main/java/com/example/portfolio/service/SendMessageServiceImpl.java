@@ -19,10 +19,9 @@ public class SendMessageServiceImpl implements SendMessageService{
 
         SimpleMailMessage smm = new SimpleMailMessage();
         
-        smm.setFrom   (form.getSenderMailAddress());
         smm.setTo     ("kota1022mukai@gmail.com");
         smm.setSubject("Contact from the portfolio");
-        smm.setText   (form.getSenderName() + "\n"+ form.getMainMessage());
+        smm.setText   (form.getSenderName() + "\n"+ form.getSenderMailAddress() + "\n" + form.getMainMessage());
         ms.send(smm);
    }
 
