@@ -27,14 +27,17 @@
             <div class = "contact-labeling">Your Name</div>
             <div>
                 <input class = "textbox" type = "text"  th:field = "*{senderName}">
+                <div class = "error-msg" th:if = "${#fields.hasErrors('senderName')}" th:errors = "*{senderName}"> </div>
             </div>
             <div class = "contact-labeling">Your Mail Address</div>
             <div>
                 <input class = "textbox"  type = "email" th:field = "*{senderMailAddress}">
+                <div class = "error-msg" th:if = "${#fields.hasErrors('senderMailAddress')}" th:errors = "*{senderMailAddress}"> </div>
             </div>
             <div class = "contact-labeling">Message</div>
             <div>
                 <textarea class = "textbox" th:field = "*{mainMessage}" rows = "10" cols = "40"></textarea>
+                <div class = "error-msg" th:if = "${#fields.hasErrors('mainMessage')}" th:errors = "*{mainMessage}"> </div>
             </div>
             <div>
                 <input class = "button" type = "submit" value = "Send Message" >

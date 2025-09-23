@@ -1,20 +1,20 @@
 package com.example.portfolio.form;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 public class SendMessageForm {
 
-    @NotNull(message = "Please enter your name below.")
-    private String SenderName;
+    @NotBlank(message = "Please enter your name below.")
+    private String senderName;
 
-    @NotNull(message = "Please enter your contact email address.")
+    @NotBlank(message = "Please enter your contact email address.")
     @Email(message = "Please enter a valid email address (e.g.,  yourname@example.com).")
-    private String SenderMailAddress;
+    private String senderMailAddress;
 
-    @NotNull(message = "Type your message here.")
-    private String MainMessage;
+    @NotBlank(message = "Type your message here.")
+    private String mainMessage;
 
 }

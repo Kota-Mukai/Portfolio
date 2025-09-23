@@ -2,6 +2,8 @@ package com.example.portfolio.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,24 +28,31 @@ public class ContactController {
         return "contact";
     }
 
-    @PostMapping("/contact")
+    @PostMapping("/contact-ret")
     public String showContactPageRet(@ModelAttribute SendMessageForm form){
         return "contact";
     }
         
     @PostMapping("/confirm-contact-message")
-    public String confirmContactMessage(@ModelAttribute
-                        SendMessageForm form, Model model) {
+    public String confirmContactMessage(@Validated @ModelAttribute
+                        SendMessageForm form, BindingResult result) {
 
-        model.addAttribute("sendMessageForm", form);
+        if(result.hasErrors()){
+            return "contact";
+        }
 
         return "confirm-contact-message";
     }
 
     @PostMapping("/send-message")
-    public String sendContactMessage(SendMessageForm form,
+    public String sendContactMessage(@Validated SendMessageForm form,
+                    BindingResult result,
                     RedirectAttributes redirectAttributes) {
         
+        if (result.hasErrors()) {
+            return "contact";
+        }
+
         service.send(form);
 
         redirectAttributes.addFlashAttribute("msg", "Thank you for contacting me.");
