@@ -36,7 +36,7 @@
               <input type = "submit" value    = "Send Message" class = "button">
            </form>
 
-           <form class = "button"  action = "/contact" method = "POST" th:object = "${sendMessageForm}">
+           <form class = "button"  action = "/contact-ret" method = "POST" th:object = "${sendMessageForm}">
               <input type = "hidden" th:field = "*{senderName}">
               <input type = "hidden" th:field = "*{senderMailAddress}">
               <input type = "hidden" th:field = "*{mainMessage}">
