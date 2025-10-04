@@ -184,6 +184,17 @@ p.frameworks-name{
     text-align : center;
 }
 
+h2.project-header{
+    font-size     : 40px;
+    font-weight   : bold;
+    background: linear-gradient(90deg, #00078d 10%, #7273ded3 40%, #eaeaf3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top    : 10px;
+    margin-bottom : 0;
+    text-align    : center;
+}
+
 #contact-form{
     text-align: center;
 }
