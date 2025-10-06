@@ -33,5 +33,4 @@ build/
 .vscode/
 
 ### Private Information ###
-/src/main/resources/application.properties
 /src/main/resources/static/img/profileAboutMe.jpg
