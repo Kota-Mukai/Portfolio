@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PortfolioController {
 
-    @GetMapping("/about-me")
+    @GetMapping({"/", "/about-me"})
     public String showAboutMePage() {
         return "about-me";
     }
