@@ -1,5 +1,5 @@
 # Portfolo
-Portfolio is a web page that clearly organizes information about me, including an introduction, an overview of projects I’ve worked on, my tech blog, and ways to contact me, so that company recruiters and others can easily review it.  
+"Portfolio" is a web page that clearly organizes information about me, including an introduction, an overview of projects I’ve worked on, my tech blog, and ways to contact me, so that company recruiters and others can easily review it.  
 You can access the portfolio deployed on Railway via the following URL:(https://kota-mukai.up.railway.app/)
 
 # Purpose of creating this tool
